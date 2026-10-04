@@ -1,0 +1,4 @@
+cafeteria-mvp — ralph progress
+US-001..004 implemented. Files: package.json, vite.config.ts, tsconfig.json, index.html, src/{main.tsx,index.css,store.ts,store.test.ts}, src/lib/points{,.test}.ts, src/data/seed.ts, src/components/{ui,Layout}.tsx, src/pages/employee/*, src/pages/admin/*, DEMO.md
+Evidence: vitest 13/13; tsc+vite build ok; playwright e2e (scratchpad/e2e.cjs) all AC ok incl. 375px no h-scroll, no console errors.
+Learnings: recommended package for grade must fit budget (was 8900>6500); recharts animates — screenshot after delay; shadcn skipped in favor of ~10 tiny Tailwind components in ui.tsx.

@@ -1,0 +1,30 @@
+{
+  "project": "cafeteria-mvp",
+  "plan": ".omc/plans/cafeteria-mvp.md",
+  "userStories": [
+    {"id": "US-001", "title": "Scaffold + store + points logic", "priority": 1, "passes": true,
+     "acceptanceCriteria": [
+       "npm run build succeeds",
+       "lib/points.ts spend(): 1000 burnable + 5000 non-burnable, price 1500 -> 0 burnable / 4500 non-burnable (vitest)",
+       "Transfer 1000 with 25% commission debits sender 1250, recipient gets 1000 (vitest)",
+       "State persists in localStorage; resetDemo restores seed"]},
+    {"id": "US-002", "title": "Employee storefront", "priority": 2, "passes": true,
+     "acceptanceCriteria": [
+       "Role Декрет hides section Страхование/Здоровье-insurance items; ВИП sees only Общие предложения",
+       "Onboarding: package over budget disables Подтвердить and shows overage",
+       "Catalog with search + filters, item page, cart with live budget",
+       "Orders page: promo-code orders cannot be cancelled; others refund points",
+       "Points page with history + chart; ДМС page with family member age validation; transfer/charity page"]},
+    {"id": "US-003", "title": "Admin console", "priority": 3, "passes": true,
+     "acceptanceCriteria": [
+       "Approving 'Доп. день отпуска' order changes status to выполнен and logs to audit with user/time/comment",
+       "Manual accrual requires comment; updates balance, employee card and audit",
+       "Archiving item hides it from catalog; existing orders still display it; delete blocked when active orders",
+       "Dashboard computed from store (not hardcoded)",
+       "Settings editable (commission, min transfer, point rub)"]},
+    {"id": "US-004", "title": "Polish + verification", "priority": 4, "passes": true,
+     "acceptanceCriteria": [
+       "vitest passes", "npm run build passes", "tsc no errors",
+       "Demo banner present; demo script DEMO.md exists"]}
+  ]
+}
